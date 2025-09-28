@@ -1,0 +1,573 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: 0;
+	color: whitesmoke;
+	list-style: none;
+	z-index: 0;
+}
+
+a:hover {
+	background-color: yellowgreen;
+	cursor: crosshair;
+}
+
+body {
+	background-color: grey;
+}
+
+textarea {
+	height: calc(100vh - 500px);
+}
+
+textarea,
+form>input {
+
+	background-color: grey;
+	width: 100%;
+	padding: 15px;
+
+}
+
+
+
+img {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: 10px;
+	animation-name: jumping;
+	animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+	z-index: 103;
+}
+
+.player {
+	margin-left: 50%;
+}
+
+.left {
+	width: 33%;
+	top: 0;
+	position: absolute;
+	height: 100vh;
+	left: 0;
+	z-index: 102;
+}
+
+.right {
+	position: absolute;
+	width: 33%;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	z-index: 102;
+}
+
+.left:hover~.player {
+	margin-left: 20%;
+}
+
+.right:hover~.player {
+	margin-left: 80%;
+}
+
+.j1,
+.j2,
+.j3,
+.j4,
+.j5,
+.j6,
+.j7,
+.j8,
+.j9,
+.j10,
+.j11 {
+	width: 100px;
+	height: 20px;
+	border-radius: 20px;
+	position: absolute;
+	margin-left: 15%;
+	top: 50%;
+	background-color: black;
+}
+
+.t1,
+.t2,
+.t3,
+.t4,
+.t5,
+.t6,
+.t7,
+.t8,
+.t9,
+.t10,
+.t11 {
+	position: absolute;
+	font-size: 30px;
+	height: 100vh;
+}
+
+.w1,
+.w2,
+.w3,
+.w4,
+.w5,
+.w6,
+.w7,
+.w8,
+.w9,
+.w10,
+.w11 {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: grey;
+}
+
+.b1,
+.b2,
+.b3,
+.b4,
+.b5,
+.b6,
+.b7,
+.b8,
+.b9,
+.b10,
+.b11 {
+	opacity: 0%;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	left: 0px;
+	top: 0px;
+	border-width: 4px;
+	color: black;
+}
+
+.links {
+	z-index: 104;
+}
+
+/*  jump 1      b-> j -> t -> w  */
+.b1 {
+	z-index: 101;
+}
+
+.j1 {
+	z-index: 100;
+}
+
+.t1 {
+	z-index: 99;
+}
+
+.w1 {
+	z-index: 98;
+}
+
+/*  jump 2      b-> j -> t -> w  */
+.b2 {
+	z-index: 97;
+}
+
+.j2 {
+	z-index: 96;
+}
+
+.t2 {
+	z-index: 95;
+}
+
+.w2 {
+	z-index: 94;
+}
+
+/*  jump 3      b-> j -> t -> w  */
+
+.b3 {
+	z-index: 93;
+}
+
+.j3 {
+	z-index: 92;
+}
+
+.t3 {
+	z-index: 91;
+}
+
+.w3 {
+	z-index: 90;
+}
+
+/*  jump 4      b-> j -> t -> w  */
+
+.b4 {
+	z-index: 89;
+}
+
+.j4 {
+	z-index: 88;
+}
+
+.t4 {
+	z-index: 87;
+}
+
+.w4 {
+	z-index: 86;
+}
+
+/*  jump 5      b-> j -> t -> w  */
+
+.b5 {
+	z-index: 85;
+}
+
+.j5 {
+	z-index: 84;
+}
+
+.t5 {
+	z-index: 83;
+}
+
+.w5 {
+	z-index: 82;
+}
+
+/*  jump 6      b-> j -> t -> w  */
+
+.b6 {
+	z-index: 81;
+}
+
+.j6 {
+	z-index: 80;
+}
+
+.t6 {
+	z-index: 79;
+}
+
+.w6 {
+	z-index: 78;
+}
+
+/*  jump 7      b-> j -> t -> w  */
+
+.b7 {
+	z-index: 77;
+}
+
+.j7 {
+	z-index: 76;
+}
+
+.t7 {
+	z-index: 75;
+}
+
+.w7 {
+	z-index: 74;
+}
+
+/*  jump 8      b-> j -> t -> w  */
+
+.b8 {
+	z-index: 73;
+}
+
+.j8 {
+	z-index: 72;
+}
+
+.t8 {
+	z-index: 71;
+}
+
+.w8 {
+	z-index: 70;
+}
+
+/*  jump 9      b-> j -> t -> w  */
+
+.b9 {
+	z-index: 69;
+}
+
+.j9 {
+	z-index: 68;
+}
+
+.t9 {
+	z-index: 67
+}
+
+.w9 {
+	z-index: 66;
+}
+
+/*  jump 10      b-> j -> t -> w  */
+
+.b10 {
+	z-index: 65;
+}
+
+.j10 {
+	z-index: 64;
+}
+
+.t10 {
+
+	z-index: 63
+}
+
+.w10 {
+	z-index: 62;
+}
+
+/*  jump 11      b-> j -> t -> w  */
+
+.b11 {
+	z-index: 61;
+}
+
+.j11 {
+	z-index: 60;
+}
+
+.t11 {
+
+	z-index: 59
+}
+
+.w11 {
+	z-index: 58;
+}
+
+.b1:checked,
+.b1:checked~.w1,
+.b1:checked~.t1 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b1:checked~.j1 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b2:checked,
+.b2:checked~.w2,
+.b2:checked~.t2 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b2:checked~.j2 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b3:checked,
+.b3:checked~.w3,
+.b3:checked~.t3 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b3:checked~.j3 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b4:checked,
+.b4:checked~.w4,
+.b4:checked~.t4 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b4:checked~.j4 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b5:checked,
+.b5:checked~.w5,
+.b5:checked~.t5 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b5:checked~.j5 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b6:checked,
+.b6:checked~.w6,
+.b6:checked~.t6 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b6:checked~.j6 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b7:checked,
+.b7:checked~.w7,
+.b7:checked~.t7 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b7:checked~.j7 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b8:checked,
+.b8:checked~.w8,
+.b8:checked~.t8 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b8:checked~.j8 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b9:checked,
+.b9:checked~.w9,
+.b9:checked~.t9 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b9:checked~.j9 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b10:checked,
+.b10:checked~.w10,
+.b10:checked~.t10 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b10:checked~.j10 {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b11:checked,
+.b11:checked~.w11,
+.b11:checked~.t11 {
+	top: 100%;
+	animation-name: scroll_down_100 !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+.b11:checked~.j11,
+.b11:checked~.left,
+.b11:checked~.right {
+	top: 100%;
+	animation-name: scroll_down_50;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
+
+@keyframes scroll_down_100 {
+	0% {
+		top: 0%;
+	}
+
+	100% {
+		top: 100%
+	}
+}
+
+@keyframes scroll_down_50 {
+	0% {
+		top: 50%;
+	}
+
+	100% {
+		top: 100%
+	}
+}
+
+@keyframes jumping {
+	0% {
+		bottom: 10px;
+		height: 40px;
+	}
+
+	30% {
+		bottom: 500px;
+		height: 60px;
+	}
+
+	80% {
+		bottom: 10px;
+		height: 40px;
+	}
+
+	100% {
+		bottom: 10px;
+		height: 40px;
+	}
+
+}
