@@ -1,10 +1,30 @@
 * {
 	margin: 0;
 	padding: 0;
-	text-decoration: 0;
-	color: whitesmoke;
-	list-style: none;
+	color: #dddddd;
+	list-style: square;
 	z-index: 0;
+	text-decoration: 0;
+	font-family: barlow;
+	font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 100px;
+}
+
+h2 {
+	font-size: 90px;
+}
+
+h3 {
+	font-size: 40px;
 }
 
 a {
@@ -31,11 +51,9 @@ textarea {
 
 textarea,
 form>input {
-
 	background-color: grey;
-	width: 100%;
+	width: calc(100vw - 40px);
 	padding: 15px;
-
 }
 
 img {
@@ -94,8 +112,12 @@ img {
 	height: 20px;
 	border-radius: 20px;
 	position: absolute;
-	top: 50%;
+	top: 20%;
 	background-color: black;
+}
+
+.j1 {
+	top: 50%;
 }
 
 .j1,
@@ -128,10 +150,14 @@ img {
 .t8,
 .t9,
 .t10,
-.t11 {
+.t11,
+.t12 {
 	position: absolute;
 	font-size: 30px;
 	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
 }
 
 .w1,
@@ -174,8 +200,39 @@ img {
 	color: black;
 }
 
-.links {
-	z-index: 104;
+b {
+	font-size: 50px;
+	font-weight: 900;
+}
+
+
+
+.t11,
+.t9,
+.t7,
+.t5,
+.t3,
+.t1 {
+	text-align: right;
+}
+
+.t1>p {
+	width: 50%;
+	margin-left: auto;
+	font-size: clamp(25px, 2vw, 12px);
+}
+
+@media screen and (max-width: 650px) {
+
+	.t4>ul,
+	.t1>p {
+		width: 100%;
+	}
+}
+
+.t4>ul,
+.t2>ul {
+	width: 50%;
 }
 
 /*  jump 1      b-> j -> t -> w  */
@@ -183,11 +240,16 @@ img {
 	z-index: 101;
 }
 
-.j1 {
+
+.t1 {
 	z-index: 100;
 }
 
-.t1 {
+.j1 {
+	z-index: 99;
+}
+
+.j2 {
 	z-index: 99;
 }
 
@@ -200,11 +262,12 @@ img {
 	z-index: 97;
 }
 
-.j2 {
+
+.t2 {
 	z-index: 96;
 }
 
-.t2 {
+.j3 {
 	z-index: 95;
 }
 
@@ -218,11 +281,12 @@ img {
 	z-index: 93;
 }
 
-.j3 {
+
+.t3 {
 	z-index: 92;
 }
 
-.t3 {
+.j4 {
 	z-index: 91;
 }
 
@@ -236,11 +300,12 @@ img {
 	z-index: 89;
 }
 
-.j4 {
+
+.t4 {
 	z-index: 88;
 }
 
-.t4 {
+.j5 {
 	z-index: 87;
 }
 
@@ -254,11 +319,12 @@ img {
 	z-index: 85;
 }
 
-.j5 {
+
+.t5 {
 	z-index: 84;
 }
 
-.t5 {
+.j6 {
 	z-index: 83;
 }
 
@@ -272,11 +338,12 @@ img {
 	z-index: 81;
 }
 
-.j6 {
+
+.t6 {
 	z-index: 80;
 }
 
-.t6 {
+.j7 {
 	z-index: 79;
 }
 
@@ -290,11 +357,12 @@ img {
 	z-index: 77;
 }
 
-.j7 {
+
+.t7 {
 	z-index: 76;
 }
 
-.t7 {
+.j8 {
 	z-index: 75;
 }
 
@@ -308,11 +376,12 @@ img {
 	z-index: 73;
 }
 
-.j8 {
+
+.t8 {
 	z-index: 72;
 }
 
-.t8 {
+.j9 {
 	z-index: 71;
 }
 
@@ -326,12 +395,13 @@ img {
 	z-index: 69;
 }
 
-.j9 {
-	z-index: 68;
-}
 
 .t9 {
-	z-index: 67
+	z-index: 68
+}
+
+.j10 {
+	z-index: 67;
 }
 
 .w9 {
@@ -344,13 +414,14 @@ img {
 	z-index: 65;
 }
 
-.j10 {
-	z-index: 64;
-}
 
 .t10 {
 
-	z-index: 63
+	z-index: 64
+}
+
+.j11 {
+	z-index: 63;
 }
 
 .w10 {
@@ -363,9 +434,6 @@ img {
 	z-index: 61;
 }
 
-.j11 {
-	z-index: 60;
-}
 
 .t11 {
 
@@ -376,182 +444,555 @@ img {
 	z-index: 58;
 }
 
+/*    -------         JUMP 1      ------------*/
 .b1:checked,
 .b1:checked~.w1,
 .b1:checked~.t1 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b1:checked~.player {
+	margin-left: 20%;
+	animation-name: f50_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b1:checked~.player>img {
+	animation-name: jumping2;
+}
+
+
+.b1:checked~.t2 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
 .b1:checked~.j1 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b1:checked~.j2 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b1:checked~.j3 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+
+}
+
+/*    --------------------    JUMP 2      2      2      2      */
 .b2:checked,
 .b2:checked~.w2,
 .b2:checked~.t2 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b2:checked~.player {
+	margin-left: 50%;
+	animation-name: f50_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+}
+
+.b2:checked~.player>img {
+	animation-name: jumping2;
+}
+
+
+.b2:checked~.t3 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b2:checked~.j1 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
 .b2:checked~.j2 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b2:checked~.j3 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b2:checked~.j4 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*    -------------       JUMP 3      ----------------    */
 .b3:checked,
 .b3:checked~.w3,
 .b3:checked~.t3 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+
+.b3:checked~.player>img {
+	animation-name: jumping2;
+}
+
+.b3:checked~.t4 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b3:checked~.player {
+	margin-left: 80%;
+	animation-name: f50_80;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b3:checked~.j2 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
 .b3:checked~.j3 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b3:checked~.j4 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b3:checked~.j5 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 4        -------       */
 .b4:checked,
 .b4:checked~.w4,
 .b4:checked~.t4 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b4:checked~.player>img {
+	animation-name: jumping2;
+}
+
+.b4:checked~.player {
+	margin-left: 50%;
+	animation-name: f50_80;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: reverse;
+}
+
+
+.b4:checked~.t5 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b4:checked~.j3 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
 .b4:checked~.j4 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b4:checked~.j5 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b4:checked~.j6 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 5        -------       */
 .b5:checked,
 .b5:checked~.w5,
 .b5:checked~.t5 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b5:checked~.player {
+	margin-left: 80%;
+}
+
+.b5:checked~.t6 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b5:checked~.j4 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
 .b5:checked~.j5 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b5:checked~.j6 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b5:checked~.j7 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 6        -------       */
 .b6:checked,
 .b6:checked~.w6,
 .b6:checked~.t6 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b6:checked~.player {
+	margin-left: 20%;
+}
+
+.b6:checked~.t7 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b6:checked~.j5 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
 .b6:checked~.j6 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b6:checked~.j7 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b6:checked~.j8 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 7        -------       */
 .b7:checked,
 .b7:checked~.w7,
 .b7:checked~.t7 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
+}
+
+.b7:checked~.t8 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b7:checked~.j6 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b7:checked~.player {
+	margin-left: 50%;
 }
 
 .b7:checked~.j7 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b7:checked~.j8 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b7:checked~.j9 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 8        -------       */
 .b8:checked,
 .b8:checked~.w8,
 .b8:checked~.t8 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
+}
+
+.b8:checked~.t9 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b8:checked~.j7 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b8:checked~.player {
+	margin-left: 20%;
 }
 
 .b8:checked~.j8 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b8:checked~.j9 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b8:checked~.j10 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+
+/*        ------            JUMP 9        -------       */
 .b9:checked,
 .b9:checked~.w9,
 .b9:checked~.t9 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
+}
+
+.b9:checked~.t10 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b9:checked~.j8 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b9:checked~.player {
+	margin-left: 80%;
 }
 
 .b9:checked~.j9 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b9:checked~.j10 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b9:checked~.j11 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 10        -------       */
 .b10:checked,
 .b10:checked~.w10,
 .b10:checked~.t10 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
+}
+
+.b10:checked~.t11 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b10:checked~.j9 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b10:checked~.player {
+	margin-left: 20%;
 }
 
 .b10:checked~.j10 {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
+.b10:checked~.j11 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b10:checked~.j12 {
+	animation-name: scroll_down_20;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+/*        ------            JUMP 11        -------       */
 .b11:checked,
 .b11:checked~.w11,
 .b11:checked~.t11 {
 	top: 100%;
-	animation-name: scroll_down_100 !important;
-	animation-duration: 1.5s;
+	animation-name: scroll_down_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 }
 
-.b11:checked~.j11,
-.b11:checked~.left,
-.b11:checked~.right {
-	top: 100%;
-	animation-name: scroll_down_50;
-	animation-duration: 1.5s;
+.b11:checked~.t12 {
+	animation-name: scroll_in_100;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
+}
+
+.b11:checked~.j10 {
+	top: 110%;
+	animation-name: scroll_down_110;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b11:checked~.player {
+	margin-left: 50%;
+}
+
+.b11:checked~.j11 {
+	top: 80%;
+	animation-name: scroll_down_80;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+.b11:checked~.j12 {
+	top: 50%;
+	animation-name: scroll_down_50;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+
+@keyframes scroll_in_100 {
+	0% {
+		top: -100%;
+	}
+
+	100% {
+		top: 0;
+	}
 }
 
 
@@ -565,14 +1006,97 @@ img {
 	}
 }
 
+@keyframes scroll_down_20 {
+	0% {
+		top: -10%;
+	}
+
+	100% {
+		top: 20%
+	}
+}
+
 @keyframes scroll_down_50 {
+	0% {
+		top: 20%;
+	}
+
+	100% {
+		top: 50%
+	}
+}
+
+@keyframes scroll_down_80 {
 	0% {
 		top: 50%;
 	}
 
 	100% {
-		top: 100%
+		top: 80%
 	}
+}
+
+@keyframes scroll_down_110 {
+	0% {
+		top: 80%;
+	}
+
+	100% {
+		top: 110%
+	}
+}
+
+@keyframes f50_20 {
+	0% {
+		margin-left: 50%;
+	}
+
+	100% {
+		margin-left: 20%;
+	}
+}
+
+@keyframes f20_80 {
+	0% {
+		margin-left: 20%;
+	}
+
+	100% {
+		margin-left: 80%;
+	}
+}
+
+@keyframes f50_80 {
+	0% {
+		margin-left: 50%;
+	}
+
+	100% {
+		margin-left: 80%;
+	}
+}
+
+@keyframes jumping2 {
+	0% {
+		top: 76%;
+		height: 40px;
+	}
+
+	30% {
+		top: 30%;
+		height: 60px;
+	}
+
+	80% {
+		top: 76%;
+		height: 35px;
+	}
+
+	100% {
+		top: 76%;
+		height: 40px;
+	}
+
 }
 
 @keyframes jumping {
@@ -582,7 +1106,7 @@ img {
 	}
 
 	30% {
-		bottom: 500px;
+		bottom: 65%;
 		height: 60px;
 	}
 
@@ -596,4 +1120,8 @@ img {
 		height: 40px;
 	}
 
+}
+
+.links {
+	z-index: 104;
 }
