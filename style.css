@@ -7,9 +7,18 @@
 	z-index: 0;
 }
 
+a {
+	color: #ffff00;
+}
+
 a:hover {
 	background-color: yellowgreen;
 	cursor: crosshair;
+}
+
+.margin10 {
+	margin: 10px;
+
 }
 
 body {
@@ -28,8 +37,6 @@ form>input {
 	padding: 15px;
 
 }
-
-
 
 img {
 	width: 40px;
@@ -87,9 +94,28 @@ img {
 	height: 20px;
 	border-radius: 20px;
 	position: absolute;
-	margin-left: 15%;
 	top: 50%;
 	background-color: black;
+}
+
+.j1,
+.j6,
+.j8,
+.j10 {
+	margin-left: 18%;
+}
+
+.j2,
+.j4,
+.j7,
+.j11 {
+	margin-left: 48%;
+}
+
+.j3,
+.j5,
+.j9 {
+	margin-left: 78%;
 }
 
 .t1,
