@@ -62,7 +62,7 @@ img {
 	position: absolute;
 	bottom: 10px;
 	animation-name: jumping;
-	animation-duration: 0.7s;
+	animation-duration: 1s;
 	animation-iteration-count: infinite;
 	z-index: 103;
 }
@@ -71,6 +71,7 @@ img {
 	margin-left: 50%;
 }
 
+/*
 .left {
 	width: 33%;
 	top: 0;
@@ -96,7 +97,7 @@ img {
 .right:hover~.player {
 	margin-left: 80%;
 }
-
+*/
 .j1,
 .j2,
 .j3,
@@ -512,7 +513,7 @@ b {
 }
 
 .b2:checked~.player>img {
-	animation-name: jumping2;
+	animation-name: jumping3;
 }
 
 
@@ -561,7 +562,8 @@ b {
 
 
 .b3:checked~.player>img {
-	animation-name: jumping2;
+	animation-name: jumping3;
+}
 }
 
 .b3:checked~.t4 {
@@ -575,6 +577,7 @@ b {
 	animation-name: f50_80;
 	animation-duration: 1s;
 	animation-iteration-count: 1;
+	animation-direction: normal;
 }
 
 .b3:checked~.j2 {
@@ -959,6 +962,11 @@ b {
 	animation-iteration-count: 1;
 }
 
+.b11:checked~.player>img {
+	animation-iteration-count: 3;
+	top: 76%;
+}
+
 .b11:checked~.j10 {
 	top: 110%;
 	animation-name: scroll_down_110;
@@ -1046,6 +1054,7 @@ b {
 	}
 }
 
+/*
 @keyframes f50_20 {
 	0% {
 		margin-left: 50%;
@@ -1074,6 +1083,29 @@ b {
 	100% {
 		margin-left: 80%;
 	}
+}
+*/
+@keyframes jumping3 {
+	0% {
+		top: 76%;
+		height: 40px;
+	}
+
+	30% {
+		top: 30%;
+		height: 60px;
+	}
+
+	80% {
+		top: 76%;
+		height: 35px;
+	}
+
+	100% {
+		top: 76%;
+		height: 40px;
+	}
+
 }
 
 @keyframes jumping2 {
